@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hien's App</title>
+</head>
+<body>
+    <div id = "root"></div>
+    <!-- <div class="title">React basic!</div>
+    <img src="https://www.google.com.vn/search?rlz=1C1SQJL_viVN814VN814&biw=1366&bih=657&tbm=isch&sa=1&ei=EvIEXL-WHJPmwQPlnoKwCg&q=logo&oq=logo&gs_l=img.3..35i39l2j0l3j0i67l2j0l3.3940.4519..4751...0.0..0.85.329.4......1....1..gws-wiz-img.w0X299_5_2c#imgrc=0ask7_MddIVz3M:" > -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // {
+        //     type: 'div'
+        //     className: 'title'
+        //     children: 'React basic'
+        // }; mo ta html dom = the div
+        const Hello = React.createElement('div',null,'Hello Van Hien!');
+        // const Title = React.createElement('div',{
+        //     className: 'title'
+        // },'React basic!');
+        //JSX
+        const Title = <div className = 'title'> Hello React </div>;
+        const Image = React.createElement('img', {
+            src: "http://taimienphi.vn/tmp/cf/aut/hinh-anh-dep-2.jpg"
+        });
+        const App = React.createElement('div',null,Title, Image)
+        const root = document.getElementById('root');
+        ReactDOM.render(App,root);
+    </script>
+</body>
+</html>
